@@ -9,9 +9,9 @@ public class HolidayService {
             if (money <= threshold) {
                 money = money + income - expenses;
             } else {
-                int moneyPre;
                 count++;
-                moneyPre = (money-expenses)-(money/3);
+                money -= expenses;
+                money /= 3;
             }
         }
         return count;
